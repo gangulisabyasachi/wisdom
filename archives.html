@@ -15,29 +15,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <h1>IJAR</h1>
-                </div>
-                <div class="nav-menu" id="nav-menu">
-                    <a href="index.html" class="nav-link" data-testid="link-nav-home">Home</a>
-                    <a href="about.html" class="nav-link" data-testid="link-nav-about">About</a>
-                    <a href="editorial-board.html" class="nav-link" data-testid="link-nav-editorial-board">Editorial Board</a>
-                    <a href="current-issue.html" class="nav-link" data-testid="link-nav-current-issue">Current Issue</a>
-                    <a href="archives.html" class="nav-link active" data-testid="link-nav-archives">Archives</a>
-                    <a href="submission-guidelines.html" class="nav-link" data-testid="link-nav-submission">Submission Guidelines</a>
-                    <a href="contact.html" class="nav-link" data-testid="link-nav-contact">Contact</a>
-                </div>
-                <div class="nav-toggle" id="nav-toggle" data-testid="button-mobile-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div id="header"></div>
+
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+    </script>
 
     <main>
         <section class="page-header" data-testid="archives-page">
@@ -204,48 +190,15 @@
         </section>
     </main>
 
-    <footer data-testid="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-main">
-                    <h3 data-testid="text-footer-title">International Journal of Advanced Research</h3>
-                    <p data-testid="text-footer-description">
-                        Advancing academic discourse through rigorous peer review and scholarly excellence across multidisciplinary fields.
-                    </p>
-                    <div class="footer-info">
-                        <p data-testid="text-footer-issn">ISSN: [To be assigned]</p>
-                        <p data-testid="text-footer-publisher">Published by Academic Research Publications India</p>
-                    </div>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="about.html" data-testid="link-footer-about">About Journal</a></li>
-                        <li><a href="editorial-board.html" data-testid="link-footer-editorial">Editorial Board</a></li>
-                        <li><a href="submission-guidelines.html" data-testid="link-footer-submission">Submission Guidelines</a></li>
-                        <li><a href="contact.html" data-testid="link-footer-contact">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-resources">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="#" data-testid="link-footer-author-guidelines">Author Guidelines</a></li>
-                        <li><a href="#" data-testid="link-footer-reviewer-guidelines">Reviewer Guidelines</a></li>
-                        <li><a href="#" data-testid="link-footer-ethics">Ethics Policy</a></li>
-                        <li><a href="#" data-testid="link-footer-archive">Archive</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p data-testid="text-footer-copyright">
-                    &copy; 2024 Academic Research Publications India. All rights reserved.
-                </p>
-            </div>
-        </div>
-    </footer>
+    <div id="footer"></div>
+
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            });
+    </script>
 
     <script src="script.js"></script>
 </body>
